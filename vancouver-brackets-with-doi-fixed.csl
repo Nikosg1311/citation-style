@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" xmlns:cs="http://purl.org/net/xbiblio/csl">
+  <info>
+    <title>Vancouver Brackets with DOI</title>
+    <id>http://www.zotero.org/styles/vancouver-brackets-with-doi</id>
+    <link href="http://www.zotero.org/styles/vancouver" rel="self"/>
+    <author>
+      <name>Modified by ChatGPT for Nikos</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="medicine"/>
+    <updated>2025-05-28T00:00:00+00:00</updated>
+    <summary>Vancouver style with bracketed citations and DOI included in references.</summary>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" and="text" delimiter=", "/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" suffix=". "/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="volume-issue">
+    <group delimiter=";">
+      <text variable="volume"/>
+      <text variable="issue" prefix="(" suffix=")"/>
+    </group>
+  </macro>
+
+  <macro name="pages">
+    <text variable="page"/>
+  </macro>
+
+  <macro name="doi">
+    <text variable="DOI" prefix=" DOI: "/>
+  </macro>
+
+  <citation>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography et-al-min="7" et-al-use-first="6" second-field-align="flush">
+    <layout suffix=".">
+      <group delimiter=" ">
+        <text macro="author"/>
+        <text macro="title"/>
+        <text macro="container-title"/>
+        <text macro="issued"/>
+        <text macro="volume-issue"/>
+        <text macro="pages"/>
+        <text macro="doi"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
